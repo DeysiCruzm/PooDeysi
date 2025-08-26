@@ -29,8 +29,4 @@ public class ClaseExterna {
         ci2.otraOperacion();
     }
 }
-class ClaseExternaX{
-
-}
-class ClaseExternaY{
-}
+class ClaseExternaX{  }
