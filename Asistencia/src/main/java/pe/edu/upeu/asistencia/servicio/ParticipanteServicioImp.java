@@ -17,7 +17,10 @@ public class ParticipanteServicioImp extends ParticipanteRepositorio implements 
     }
 
     @Override
-    public List<Participante> findAll() { // Read, Report
+    public List<Participante> findAll() {// Read, Report
+        if (listaEstudiantes.isEmpty()) {
+            return super.findAll();
+        }
         return listaEstudiantes;
     }
 
