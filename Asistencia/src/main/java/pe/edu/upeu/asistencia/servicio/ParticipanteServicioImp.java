@@ -6,36 +6,34 @@ import pe.edu.upeu.asistencia.repositorio.ParticipanteRepositorio;
 
 import java.util.List;
 
-@Service // para injección de dependencias
-public class ParticipanteServicioImp extends ParticipanteRepositorio implements ParticipanteServicioI { // herencia e implementación
-
-    //List<Estudiante> listaEstudiantes=new ArrayList<>();
+@Service
+public class ParticipanteServicioImp extends ParticipanteRepositorio implements ParticipanteServicioI {
 
     @Override
-    public void save(Participante participante) { // Create
-        listaEstudiantes.add(participante);
+    public void save(Participante participante) {
+        listaParticipantes.add(participante);
     }
 
     @Override
-    public List<Participante> findAll() {// Read, Report
-        if (listaEstudiantes.isEmpty()) {
+    public List<Participante> findAll() {
+        if(listaParticipantes.isEmpty()){
             return super.findAll();
         }
-        return listaEstudiantes;
+        return listaParticipantes;
     }
 
     @Override
-    public void update(Participante participante, int index) { // Update
-        listaEstudiantes.set(index, participante);
+    public void update(Participante participante, int index) {
+        listaParticipantes.set(index, participante);
     }
 
     @Override
-    public void delete(int index) { // Deleted
-        listaEstudiantes.remove(index);
+    public void delete(int index) {
+        listaParticipantes.remove(index);
     }
 
     @Override
-    public Participante findByID(int index) { // Search
-        return listaEstudiantes.get(index);
+    public Participante findById(int index) {
+        return listaParticipantes.get(index);
     }
 }

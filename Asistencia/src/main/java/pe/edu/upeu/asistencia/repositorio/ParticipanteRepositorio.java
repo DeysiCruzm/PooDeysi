@@ -2,31 +2,36 @@ package pe.edu.upeu.asistencia.repositorio;
 
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-import pe.edu.upeu.asistencia.enums.CARRERA;
-import pe.edu.upeu.asistencia.enums.TIPO_PARTICIPANTE;
+import pe.edu.upeu.asistencia.enums.Carrera;
+import pe.edu.upeu.asistencia.enums.TipoParticipante;
 import pe.edu.upeu.asistencia.modelo.Participante;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class ParticipanteRepositorio {
-    public List<Participante> listaEstudiantes= new ArrayList<>();
+   public List<Participante> listaParticipantes =new ArrayList<>();
 
-    public List<Participante> findAll(){
-        listaEstudiantes.add(
-                new Participante(
-                        new SimpleStringProperty("60527338"),
-                        new SimpleStringProperty("Dey"),
-                        new SimpleStringProperty("cruz"),
-                        new SimpleBooleanProperty(true), CARRERA.Sistemas,
-                        TIPO_PARTICIPANTE.organizador
+   public List<Participante> findAll(){
+      listaParticipantes.add(
+              new Participante(
+                      new SimpleStringProperty("43631917"),
+                      new SimpleStringProperty("Juan"),
+                      new SimpleStringProperty("Apaza"),
+                      new SimpleBooleanProperty(true), Carrera.SISTEMAS,
+                      TipoParticipante.ASISTENTE
+              )
+      );
+      listaParticipantes.add(
+              new Participante(
+                      new SimpleStringProperty("43631918"),
+                      new SimpleStringProperty("Pedro"),
+                      new SimpleStringProperty("Gutierrez"),
+                      new SimpleBooleanProperty(true), Carrera.SISTEMAS,
+                      TipoParticipante.ASISTENTE
+              )
+      );
+      return listaParticipantes;
+   }
 
-
-
-                )
-        );
-        return listaEstudiantes;
-
-    }
 }

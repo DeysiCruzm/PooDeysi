@@ -12,19 +12,12 @@ import pe.edu.upeu.asistencia.servicio.ParticipanteServicioI;
 
 @Controller
 public class AsistenciaController {
-    //EstudianteServicioI es = new EstudianteServicioImp();
 
     @Autowired
     ParticipanteServicioI participanteServicioI;
 
-    @FXML
-    private Label idMsg;
-    @FXML
-    private Label idMsg1;
-    @FXML
-    TextField txtDato;
-    @FXML
-    TextField txtDato1;
+    @FXML private Label idMsg;
+    @FXML TextField txtDato;
 
     //@FXML Button btnEnviar;
 
@@ -32,24 +25,23 @@ public class AsistenciaController {
     void enviar(){
         System.out.println("Enviando asistencia");
         idMsg.setText(txtDato.getText());
-        idMsg1.setText(txtDato1.getText());
     }
 
     @FXML
-    public void regEstudiante(){
+    void regEstudiante(){
         Participante participante = new Participante();
         participante.setNombre(new SimpleStringProperty(txtDato.getText()));
         participante.setEstado(new SimpleBooleanProperty(true));
 
         participanteServicioI.save(participante);
-
         listarEstudiantes();
     }
 
-    @FXML
     void listarEstudiantes(){
-        for(Participante e: participanteServicioI.findAll()){
+        for (Participante e: participanteServicioI.findAll()){
             System.out.println(e.getNombre());
         }
     }
+
+
 }
