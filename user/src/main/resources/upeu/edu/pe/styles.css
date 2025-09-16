@@ -1,0 +1,76 @@
+/* Fondo general */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+    -fx-padding: 20;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+/* Títulos principales */
+.label {
+    -fx-text-fill: #334e68;
+    -fx-font-weight: bold;
+}
+
+/* Etiquetas pequeñas (ej: "usuario", "contraseña") */
+.label-small {
+    -fx-text-fill: #627d98;
+    -fx-font-size: 12px;
+}
+
+/* Campos de texto */
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-border-color: #bcccdc;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 6 10;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #3d5a80;
+    -fx-border-width: 2;
+}
+
+/* Botones */
+.button {
+    -fx-background-color: #3d5a80;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-padding: 8 18;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.button:hover {
+    -fx-background-color: #293241;
+}
+
+.button:pressed {
+    -fx-background-color: #1d2d44;
+}
+
+/* VBox y HBox */
+.vbox, .hbox {
+    -fx-spacing: 10;
+}
+
+/* Caja que agrupa formulario */
+.form-box {
+    -fx-background-color: rgba(255, 255, 255, 0.25); /* blanco transparente */
+    -fx-background-radius: 15;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10, 0, 0, 5);
+}
+.link-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #3d5a80;
+    -fx-underline: true;
+    -fx-cursor: hand;
+    -fx-font-size: 12px;
+    -fx-padding: 0;
+}
+
+.link-button:hover {
+    -fx-text-fill: #1d2d44;
+}

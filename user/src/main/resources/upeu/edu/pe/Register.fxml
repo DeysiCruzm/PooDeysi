@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane prefHeight="330.0" prefWidth="422.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="upeu.edu.pe.RegisterController">
+
+    <children>
+
+        <!-- Caja con el formulario -->
+        <VBox alignment="CENTER" prefHeight="371.0" prefWidth="466.0" spacing="10" styleClass="form-box">
+            <effect>
+                <!-- Difuminado tipo glass -->
+                <GaussianBlur radius="15" />
+            </effect>
+
+            <!-- Título -->
+            <Label style="-fx-font-size: 24px;" text="Registro de Usuario" textAlignment="CENTER" />
+            <TextField fx:id="txtUsuario" promptText="Usuario" />
+
+            <!-- Contraseña -->
+            <Label styleClass="label-small" text="Ingrese su contraseña" />
+            <PasswordField fx:id="txtPassword" promptText="Nueva contraseña" />
+
+
+            <!-- Confirmar contraseña -->
+            <Label styleClass="label-small" text="Confirme su contraseña" />
+            <PasswordField promptText="Confirmación" />
+
+            <!-- Botones con iconos -->
+            <HBox alignment="CENTER" spacing="15">
+                <children>
+                    <Button text="Volver">
+                        <graphic>
+                            <ImageView fitHeight="16" fitWidth="16" preserveRatio="true">
+                                <image>
+                                    <Image url="@icono3.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button text="Registrar">
+                        <graphic>
+                            <ImageView fitHeight="16" fitWidth="16" preserveRatio="true">
+                                <image>
+                                    <Image url="@icono2.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </children>
+            </HBox>
+        </VBox>
+    </children>
+</StackPane>
