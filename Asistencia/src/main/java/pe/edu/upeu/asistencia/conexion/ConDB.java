@@ -10,7 +10,7 @@ public class ConDB {
     public static Connection getConexion(){
         try {
             Class.forName("org.sqlite.JDBC");
-            String url = "jdbc:sqlite:data/asistenciadb.db?foreing_keys=on";
+            String url = "jdbc:sqlite:data/asistenciadb.db?foreign_keys=on";
             if (conexion==null){
                 conexion = DriverManager.getConnection(url);
             }
@@ -38,8 +38,8 @@ public class ConDB {
             pst=con.prepareStatement("SELECT * FROM participante");
             rs=pst.executeQuery();
             while(rs.next()){
-                System.out.println(rs.getString(1));
-                System.out.println(rs.getString(2));
+                System.out.println(rs.getString("dni"));
+                System.out.println(rs.getString("nombre"));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
