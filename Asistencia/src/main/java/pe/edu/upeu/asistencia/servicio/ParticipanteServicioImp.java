@@ -2,7 +2,6 @@ package pe.edu.upeu.asistencia.servicio;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.edu.upeu.asistencia.control.ParticipanteController;
 import pe.edu.upeu.asistencia.modelo.Participante;
 import pe.edu.upeu.asistencia.repositorio.ParticipanteIRepositorio;
 

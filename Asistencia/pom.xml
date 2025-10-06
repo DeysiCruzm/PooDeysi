@@ -78,8 +78,17 @@
 			<artifactId>hibernate-community-dialects</artifactId>
 			<version>6.4.4.Final</version>
 		</dependency>
+        <!--Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
-	</dependencies>
+    </dependencies>
 
 	<build>
 		<plugins>
@@ -107,7 +116,7 @@
 						</exclude>
 					</excludes>
 					<!-- Configuracion de inicio de clase principal  -->
-					<mainClass>pe.edu.upeu.asistencia.Aplication</mainClass>
+					<mainClass>pe.edu.upeu.asistencia.AsistenciaApplication</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
