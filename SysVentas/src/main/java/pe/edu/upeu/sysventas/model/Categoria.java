@@ -1,4 +1,4 @@
-package pe.edu.upeu.sysventas.controller;
+package pe.edu.upeu.sysventas.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
